@@ -1,15 +1,14 @@
-import "./Header.css";
-import { NavLink } from "react-router-dom";
-import { UserContext } from "../../context/userContext";
-import { useContext } from "react";
+import './Header.css';
 
+import { useContext } from 'react';
+import { NavLink } from 'react-router-dom';
+
+import { UserContext } from '../../context/userContext';
 
 const Header = () => {
-  
-    
   const { user, logout } = useContext(UserContext);
-  
-    return (
+
+  return (
     <header>
       <h1>HRTalents</h1>
       <nav>
@@ -23,7 +22,7 @@ const Header = () => {
           <li>
             <NavLink to="/laborales">Laborales</NavLink>
           </li>
-          
+
           {user !== null ? (
             <>
               <li>
@@ -41,10 +40,6 @@ const Header = () => {
               </li>
             </>
           )}
-          
-          <li>
-            <NavLink to="/notfound">NotFound</NavLink>
-          </li>
         </ul>
       </nav>
     </header>

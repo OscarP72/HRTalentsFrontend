@@ -1,8 +1,7 @@
-import "./Footer.css";
+import './Footer.css';
 
 const Footer = () => {
-
-    return (
+  return (
     <footer>
       <p>HRTalents</p>
     </footer>
