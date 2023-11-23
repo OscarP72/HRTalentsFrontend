@@ -1,6 +1,49 @@
 footer {
-    height: 50px;
-    width: auto;
-    display: grid;
-    place-items: center;
+  height: 80px;
+  display: flex;
+  padding: 20px;
+  bottom: 0;
+  position: absolute;
+  justify-content: center;
+  width: 100%;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.social-icons > div {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+}
+
+.social-icons .facebook {
+  background-color: #3b5998;
+}
+
+.social-icons .linkedin {
+  background-color: #0077b5;
+}
+
+.social-icons .youtube {
+  background-color: #ff0000;
+}
+
+.social-icons .instagram {
+  background-color: #405de6;
+}
+
+.copyright {
+  margin-top: 20px;
+}
+
+.copyright i {
+  font-size: 18px;
 }
