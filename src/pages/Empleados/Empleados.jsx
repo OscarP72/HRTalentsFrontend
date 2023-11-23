@@ -1,11 +1,7 @@
-import "./Empleados.css";
+import './Empleados.css';
 
 const Empleados = () => {
-
-
-  return (
-    <main>Empleados</main>
-  );
+  return <main>Empleados </main>;
 };
 
 export default Empleados;

@@ -1,11 +1,7 @@
-import "./Laborales.css";
+import './Laborales.css';
 
 const Laborales = () => {
-
-
-  return (
-    <main>Laborales</main>
-  );
+  return <main>Laborales</main>;
 };
 
 export default Laborales;

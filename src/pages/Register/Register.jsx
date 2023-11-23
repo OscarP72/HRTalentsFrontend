@@ -1,11 +1,7 @@
-import "./Register.css";
+import './Register.css';
 
 const Register = () => {
-
-
-  return (
-    <main>Register</main>
-  );
+  return <main>Register</main>;
 };
 
 export default Register;
