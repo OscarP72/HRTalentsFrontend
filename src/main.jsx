@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import App from './App.jsx';
 import { UserContextProvider } from './context/userContext.jsx';
+import EmpleadoDetail from './pages/EmpleadoDetail/EmpleadoDetail.jsx';
 import Empleados from './pages/Empleados/Empleados.jsx';
 import Home from './pages/Home/Home.jsx';
 import Laborales from './pages/Laborales/Laborales.jsx';
@@ -22,6 +23,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="/" element={<App />}>
             <Route index element={<Home />} />
             <Route path="/empleados" element={<Empleados />} />
+            <Route path="/empleados/:name" element={<EmpleadoDetail />} />
             <Route path="/laborales" element={<Laborales />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/login" element={<Login />} />
