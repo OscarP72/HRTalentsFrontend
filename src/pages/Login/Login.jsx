@@ -10,14 +10,17 @@ const Login = () => {
   //Almacenamos la funcionalidad del useNavigate
   const navigate = useNavigate();
   const { login } = useContext(UserContext);
-  const usernameInput = useRef(null);
-  const passwordInput = useRef(null);
+
+  const usernameRef = useRef(null);
+  const passwordRef = useRef(null);
 
   const handleSubmit = (ev) => {
     ev.preventDefault();
+
     const body = new FormData();
-    body.append('username', usernameInput.current.value);
-    body.append('password', passwordInput.current.value);
+    body.append('username', usernameRef.current.value);
+    body.append('password', passwordRef.current.value);
+
     API.post('/users/login', body)
       .then((res) => {
         login(
@@ -31,15 +34,18 @@ const Login = () => {
         navigate('/empleados');
       })
       .catch((error) => {
-        alert('USUARIO NO VALIDO');
+        alert('USUARIO NO VALIDO', error);
       });
   };
 
   return (
-    <main>
+    <main className="login">
+      <h2>Login</h2>
       <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Username" ref={usernameInput} />
-        <input type="password" placeholder="Password" ref={passwordInput} />
+        <label htmlFor="username">Username</label>
+        <input id="username" type="text" minLength={3} required ref={usernameRef} />
+        <label htmlFor="password">Password</label>
+        <input id="password" type="password" minLength={8} required ref={passwordRef} />
         <button type="submit">Login</button>
       </form>
     </main>
