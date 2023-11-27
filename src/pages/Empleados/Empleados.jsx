@@ -122,15 +122,14 @@ const Empleados = () => {
                       .map((info) => (
                         <div key={info._id}>
                           <NavLink to={`/employeess/${info.salary}`}>
-                            {info.salary}
+                            <p>Salario: {info.salary}</p>
                           </NavLink>
-                          <NavLink to={`/employeess/${info.job}`}>{info.job}</NavLink>
+                          <NavLink to={`/employeess/${info.job}`}>
+                            <p>Cargo: {info.job}</p>
+                          </NavLink>
                           <NavLink to={`/employeess/${info.position}`}>
-                            {info.position}
+                            <p>Categoria: {info.position}</p>
                           </NavLink>
-                          <p>Salario {info.salary}</p>
-                          <p>Cargo {info.job}</p>
-                          <p>Categoria {info.position}</p>
                         </div>
                       ))}
                   </td>
