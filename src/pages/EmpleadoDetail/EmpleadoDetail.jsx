@@ -17,7 +17,7 @@ const EmpleadoDetail = () => {
     <main>
       {empleado !== null ? (
         <>
-          <h2>{empleado.emplid}</h2>
+          <h3>{empleado.emplid}</h3>
           <h2>{empleado.name}</h2>
           <h2>{empleado.lastname}</h2>
           <h2>{empleado.nif}</h2>
@@ -30,7 +30,7 @@ const EmpleadoDetail = () => {
           <h2>{empleado.ssnumber}</h2>
           <h2>{empleado.addresses}</h2>
           <h2>{empleado.departament}</h2>
-          <h3>Información Laboral</h3>
+          <h3>{empleado.laborinformation}</h3>
           <ul>
             {empleado.laborinformations.map((laborinformation) => (
               <li key={laborinformation._id}>

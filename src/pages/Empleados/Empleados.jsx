@@ -7,11 +7,18 @@ import API from '../../API/API';
 
 const Empleados = () => {
   const [empleados, setEmpleados] = useState([]);
+  const [laborInformation, setLaborInformation] = useState([]);
   useEffect(() => {
     API.get('/employeess').then((res) => {
       setEmpleados(res.data);
     });
+    API.get('/laborinformations').then((res) => {
+      setLaborInformation(res.data);
+    });
   }, []);
+  console.log('Empleados:', empleados);
+  console.log('Labor Information:', laborInformation);
+
   return (
     <main className="empleados">
       <div className="container mt-3">
@@ -34,6 +41,7 @@ const Empleados = () => {
                 <th>Nº Seg. Social</th>
                 <th>Dirección</th>
                 <th>Departamento</th>
+                <th>Información Laboral</th>
               </tr>
             </thead>
             <tbody>
@@ -107,6 +115,24 @@ const Empleados = () => {
                     <NavLink to={`/employeess/${empleado.department}`}>
                       {empleado.department}
                     </NavLink>
+                  </td>
+                  <td>
+                    {empleado.laborInformation
+                      .filter((info) => info._id !== undefined)
+                      .map((info) => (
+                        <div key={info._id}>
+                          <NavLink to={`/employeess/${info.salary}`}>
+                            {info.salary}
+                          </NavLink>
+                          <NavLink to={`/employeess/${info.job}`}>{info.job}</NavLink>
+                          <NavLink to={`/employeess/${info.position}`}>
+                            {info.position}
+                          </NavLink>
+                          <p>Salario {info.salary}</p>
+                          <p>Cargo {info.job}</p>
+                          <p>Categoria {info.position}</p>
+                        </div>
+                      ))}
                   </td>
                 </tr>
               ))}
