@@ -11,20 +11,22 @@ const Header = () => {
   return (
     <header>
       <h1>HRTalents</h1>
+      {user !== null && <h2>Hola {user.username}</h2>}
       <nav>
         <ul>
           <li>
             <NavLink to="/">Home</NavLink>
           </li>
-          <li>
-            <NavLink to="/empleados">Empleados</NavLink>
-          </li>
+
           <li>
             <NavLink to="/laborales">Laborales</NavLink>
           </li>
 
           {user !== null ? (
             <>
+              <li>
+                <NavLink to="/empleados">Empleados</NavLink>
+              </li>
               <li>
                 <NavLink to="/profile">Profile</NavLink>
               </li>
@@ -40,10 +42,6 @@ const Header = () => {
               </li>
             </>
           )}
-
-          <li>
-            <NavLink to="/notfound">NotFound</NavLink>
-          </li>
         </ul>
       </nav>
     </header>
