@@ -1,142 +1,90 @@
 import './Empleados.css';
 
 import { useEffect, useState } from 'react';
-import { NavLink } from 'react-router-dom';
 
 import API from '../../API/API';
 
 const Empleados = () => {
   const [empleados, setEmpleados] = useState([]);
-  const [laborInformation, setLaborInformation] = useState([]);
+  const [selectedEmpleado, setSelectedEmpleado] = useState(null);
   useEffect(() => {
     API.get('/employeess').then((res) => {
       setEmpleados(res.data);
     });
-    API.get('/laborinformations').then((res) => {
-      setLaborInformation(res.data);
-    });
   }, []);
-  console.log('Empleados:', empleados);
-  console.log('Labor Information:', laborInformation);
+
+  const openModal = (empleado) => {
+    setSelectedEmpleado(empleado);
+    // Abre el modal usando el identificador del modal
+    const modal = new window.bootstrap.Modal(document.getElementById('myModal'));
+    modal.show();
+  };
 
   return (
     <main className="empleados">
       <div className="container mt-3">
-        <div className="table-reponsive-sm">
-          <table className="table table-information table-bordered">
-            <thead>
-              <tr>
-                <th>Nº Empleado</th>
-                <th>Nombre</th>
-                <th>Apellidos</th>
-                <th>NIF</th>
-                <th>Teléfono</th>
-                <th>F. Nacimiento</th>
-                <th>F. ALta Empresa</th>
-                <th>F. Baja Empresa</th>
-                <th>Estado Civil</th>
-                <th>Hijos</th>
-                <th>CIF Empresa</th>
-                <th>Empresa</th>
-                <th>Nº Seg. Social</th>
-                <th>Dirección</th>
-                <th>Departamento</th>
-                <th>Información Laboral</th>
-              </tr>
-            </thead>
-            <tbody>
-              {empleados.map((empleado) => (
-                <tr key={empleado._id}>
-                  <td>
-                    <NavLink to={`/employeess/${empleado.emplid}`}>
-                      {empleado.emplid}
-                    </NavLink>
-                  </td>
-                  <td>
-                    <NavLink to={`/employeess/${empleado.name}`}>{empleado.name}</NavLink>
-                  </td>
-                  <td>
-                    <NavLink to={`/employeess/${empleado.lastname}`}>
-                      {empleado.lastname}
-                    </NavLink>
-                  </td>
-                  <td>
-                    <NavLink to={`/employeess/${empleado.nif}`}>{empleado.nif}</NavLink>
-                  </td>
-                  <td>
-                    <NavLink to={`/employeess/${empleado.phone}`}>
-                      {empleado.phone}
-                    </NavLink>
-                  </td>
-                  <td>
-                    <NavLink to={`/employeess/${empleado.birthdate}`}>
-                      {empleado.birthdate}
-                    </NavLink>
-                  </td>
-                  <td>
-                    <NavLink to={`/employeess/${empleado.dischargeDate}`}>
-                      {empleado.dischargeDate}
-                    </NavLink>
-                  </td>
-                  <td>
-                    <NavLink to={`/employeess/${empleado.enddate}`}>
-                      {empleado.enddate}
-                    </NavLink>
-                  </td>
-                  <td>
-                    <NavLink to={`/employeess/${empleado.maritalstatus}`}>
-                      {empleado.maritalstatus}
-                    </NavLink>
-                  </td>
-                  <td>
-                    <NavLink to={`/employeess/${empleado.children}`}>
-                      {empleado.children}
-                    </NavLink>
-                  </td>
-                  <td>
-                    <NavLink to={`/employeess/${empleado.cif}`}>{empleado.cif}</NavLink>
-                  </td>
-                  <td>
-                    <NavLink to={`/employeess/${empleado.company}`}>
-                      {empleado.company}
-                    </NavLink>
-                  </td>
-                  <td>
-                    <NavLink to={`/employeess/${empleado.ssnumber}`}>
-                      {empleado.ssnumber}
-                    </NavLink>
-                  </td>
-                  <td>
-                    <NavLink to={`/employeess/${empleado.addresses}`}>
-                      {empleado.addresses}
-                    </NavLink>
-                  </td>
-                  <td>
-                    <NavLink to={`/employeess/${empleado.department}`}>
-                      {empleado.department}
-                    </NavLink>
-                  </td>
-                  <td>
-                    {empleado.laborInformation
-                      .filter((info) => info._id !== undefined)
-                      .map((info) => (
-                        <div key={info._id}>
-                          <NavLink to={`/employeess/${info.salary}`}>
-                            <p>Salario: {info.salary}</p>
-                          </NavLink>
-                          <NavLink to={`/employeess/${info.job}`}>
-                            <p>Cargo: {info.job}</p>
-                          </NavLink>
-                          <NavLink to={`/employeess/${info.position}`}>
-                            <p>Categoria: {info.position}</p>
-                          </NavLink>
-                        </div>
-                      ))}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        {empleados.map((empleado) => (
+          <div key={empleado._id}>
+            <button
+              type="button"
+              className="btn btn-primary"
+              onClick={() => openModal(empleado)}
+            >
+              Ver detalles
+            </button>
+          </div>
+        ))}
+        <div
+          className="modal fade"
+          id="myModal"
+          tabIndex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div className="modal-dialog">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title">Detalles del Empleado</h5>
+                <button
+                  type="button"
+                  className="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div className="modal-body">
+                <p>Nª Empleado:{selectedEmpleado?.emplid}</p>
+                <p>Nombre:{selectedEmpleado?.name}</p>
+                <p>Apellidos:{selectedEmpleado?.lastname}</p>
+                <p>Nif:{selectedEmpleado?.nif}</p>
+                <p>Teléfono:{selectedEmpleado?.phone}</p>
+                <p>Fecha de Nacimiento:{selectedEmpleado?.birthdate}</p>
+                <p>Fecha de Alta:{selectedEmpleado?.dischargeDate}</p>
+                <p>Fecha de Baja:{selectedEmpleado?.enddate}</p>
+                <p>Estado Civil:{selectedEmpleado?.maritalstatus}</p>
+                <p>Hijos:{selectedEmpleado?.children}</p>
+                <p>Cif:{selectedEmpleado?.cif}</p>
+                <p>Compañia:{selectedEmpleado?.company}</p>
+                <p>Nº Seg. Social:{selectedEmpleado?.ssnumber}</p>
+                <p>Dirección:{selectedEmpleado?.addresses}</p>
+                <p>Departamento:{selectedEmpleado?.department}</p>
+                {selectedEmpleado?.laborInformation
+                  .filter((info) => info._id !== undefined)
+                  .map((info) => (
+                    <div key={info._id}>
+                      <p>Salario: {info.salary}</p>
+                      <p>Cargo: {info.job}</p>
+                      <p>Categoria: {info.position}</p>
+                    </div>
+                  ))}
+              </div>
+              <div className="modal-footer">
+                <button type="button" className="btn btn-danger" data-bs-dismiss="modal">
+                  Cerrar
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
