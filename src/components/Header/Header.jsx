@@ -19,7 +19,7 @@ const Header = () => {
           </li>
 
           <li>
-            <NavLink to="/laborales">Laborales</NavLink>
+            <NavLink to="/sobrenosotros">Sobre Nosotros</NavLink>
           </li>
 
           {user !== null ? (

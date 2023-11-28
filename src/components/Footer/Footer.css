@@ -9,7 +9,13 @@ html {
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 10px;
-  background-color: var(--secondary);
+  background-color: rgb(36, 35, 35);
+}
+.footer {
+  background-color: rgb(36, 35, 35);
+}
+.footer-content {
+  height: 180px;
 }
 
 .footer-column {

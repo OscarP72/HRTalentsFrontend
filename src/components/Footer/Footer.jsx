@@ -8,8 +8,8 @@ const Footer = () => {
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
       />
 
-      <footer className="footer fondo-secundario mt-5 pt-4 pb-4">
-        <div className="footer-content d-flex flex-wrap justify-content-around">
+      <footer className="footer">
+        <div className="footer-content py-2">
           <div className="footer-column text-center mb-3">
             <h3 className="text-white mb-2">RhTalents</h3>
             <p className="text-white">Teléfono: 911106106</p>

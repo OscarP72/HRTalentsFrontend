@@ -1,4 +1,4 @@
-.profile {
+.perfil {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6,9 +6,9 @@
   gap: 20px;
 }
 
-.profile img {
-  width: 200px;
-  height: 200px;
+.perfil img {
+  width: 400px;
+  height: 400px;
   object-fit: cover;
   border-radius: 50%;
 }
