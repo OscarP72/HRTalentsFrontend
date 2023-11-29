@@ -15,7 +15,7 @@ const Header = () => {
       <nav>
         <ul>
           <li>
-            <NavLink to="/">Home</NavLink>
+            <NavLink to="/">Inicio</NavLink>
           </li>
 
           <li>
@@ -38,7 +38,7 @@ const Header = () => {
                 <NavLink to="/login">Login</NavLink>
               </li>
               <li>
-                <NavLink to="/register">Register</NavLink>
+                <NavLink to="/register">Registro</NavLink>
               </li>
             </>
           )}

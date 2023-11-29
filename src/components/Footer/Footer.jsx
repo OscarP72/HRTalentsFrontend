@@ -63,7 +63,12 @@ const Footer = () => {
               style={{ maxWidth: '110px' }}
             />
           </a>
-          <a href="https://www.fundaciononce.es/es" className="mx-2">
+          <a
+            href="https://www.fundaciononce.es/es"
+            target="_blank"
+            className="mx-2"
+            rel="noreferrer"
+          >
             <img
               src="https://portalentodigital.fundaciononce.es/sites/default/files/pictures/logo-gso2021.png"
               alt="Logo de Fundación Once"
@@ -71,7 +76,12 @@ const Footer = () => {
               style={{ maxWidth: '110px' }}
             />
           </a>
-          <a href="https://www.fundaciononce.es" className="mx-2">
+          <a
+            href="https://www.fundaciononce.es"
+            target="_blank"
+            className="mx-2"
+            rel="noreferrer"
+          >
             <img
               src="https://www.fundaciononce.es/themes/d8_base_dev_theme-8.x-1.0/logo.svg"
               alt="Logo de Fundación Once"
@@ -79,7 +89,12 @@ const Footer = () => {
               style={{ maxWidth: '110px' }}
             />
           </a>
-          <a href="https://portalentodigital.fundaciononce.es/" className="mx-2">
+          <a
+            href="https://portalentodigital.fundaciononce.es/"
+            target="_blank"
+            className="mx-2"
+            rel="noreferrer"
+          >
             <img
               src="https://portalentodigital.fundaciononce.es/sites/all/themes/foncecaptacion/logo.png"
               alt="Logo de Por Talento Digital"
@@ -87,7 +102,12 @@ const Footer = () => {
               style={{ maxWidth: '110px' }}
             />
           </a>
-          <a href="https://www.ilunion.com/es" className="mx-2">
+          <a
+            href="https://www.ilunion.com/es"
+            target="_blank"
+            className="mx-2"
+            rel="noreferrer"
+          >
             <img
               src="https://www.ilunion.com/themes/custom/iluniontheme/logo.svg"
               alt="Logo de Ilunión"
