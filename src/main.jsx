@@ -14,6 +14,7 @@ import NotFound from './pages/NotFound/NotFound.jsx';
 import Profile from './pages/Profile/Profile.jsx';
 import Register from './pages/Register/Register.jsx';
 import SobreNosotros from './pages/SobreNosotros/SobreNosotros.jsx';
+import IsAuth from './components/IsAuth/IsAuth.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -22,7 +23,14 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Routes>
           <Route path="/" element={<App />}>
             <Route index element={<Home />} />
-            <Route path="/empleados" element={<Empleados />} />
+            <Route
+              path="/empleados"
+              element={
+                <IsAuth>
+                  <Empleados />
+                </IsAuth>
+              }
+            />
             <Route path="/empleados/:name" element={<EmpleadoDetail />} />
             <Route path="/sobrenosotros" element={<SobreNosotros />} />
             <Route path="/profile" element={<Profile />} />

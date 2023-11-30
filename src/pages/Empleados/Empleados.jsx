@@ -15,7 +15,7 @@ const Empleados = () => {
 
   const openModal = (empleado) => {
     setSelectedEmpleado(empleado);
-    // Abre el modal usando el identificador del modal
+
     const modal = new window.bootstrap.Modal(document.getElementById('myModal'));
     modal.show();
   };
