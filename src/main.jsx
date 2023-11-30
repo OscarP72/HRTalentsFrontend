@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import App from './App.jsx';
+import IsAuth from './components/IsAuth/IsAuth.jsx';
 import { UserContextProvider } from './context/userContext.jsx';
 import EmpleadoDetail from './pages/EmpleadoDetail/EmpleadoDetail.jsx';
 import Empleados from './pages/Empleados/Empleados.jsx';
@@ -14,7 +15,6 @@ import NotFound from './pages/NotFound/NotFound.jsx';
 import Profile from './pages/Profile/Profile.jsx';
 import Register from './pages/Register/Register.jsx';
 import SobreNosotros from './pages/SobreNosotros/SobreNosotros.jsx';
-import IsAuth from './components/IsAuth/IsAuth.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
