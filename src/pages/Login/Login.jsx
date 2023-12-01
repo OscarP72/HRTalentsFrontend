@@ -1,10 +1,10 @@
-import './Login.css';
+import "./Login.css";
 
-import { useContext, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useContext, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
-import { UserContext } from '../../context/userContext';
-import API from '../../services/API';
+import { UserContext } from "../../context/userContext";
+import API from "../../services/API";
 
 const Login = () => {
   //Almacenamos la funcionalidad del useNavigate
@@ -16,9 +16,9 @@ const Login = () => {
   const handleSubmit = (ev) => {
     ev.preventDefault();
     const body = new FormData();
-    body.append('username', usernameInput.current.value);
-    body.append('password', passwordInput.current.value);
-    API.post('/users/login', body)
+    body.append("username", usernameInput.current.value);
+    body.append("password", passwordInput.current.value);
+    API.post("/users/login", body)
       .then((res) => {
         login(
           {
@@ -28,10 +28,10 @@ const Login = () => {
           },
           res.data.token,
         );
-        navigate('/empleados');
+        navigate("/empleados");
       })
       .catch((error) => {
-        alert('USUARIO NO VALIDO');
+        alert("USUARIO NO VALIDO");
       });
   };
 

@@ -1,10 +1,10 @@
-import './Register.css';
+import "./Register.css";
 
-import { useContext, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useContext, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
-import { UserContext } from '../../context/userContext';
-import API from '../../services/API';
+import { UserContext } from "../../context/userContext";
+import API from "../../services/API";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -17,22 +17,22 @@ const Register = () => {
     ev.preventDefault();
     //Creamos un formdata para poder trabajar con multipartform
     const body = new FormData();
-    body.append('username', usernameValue.current.value);
-    body.append('password', passwordValue.current.value);
-    body.append('avatar', fileValue.current.files[0]);
+    body.append("username", usernameValue.current.value);
+    body.append("password", passwordValue.current.value);
+    body.append("avatar", fileValue.current.files[0]);
     //Hacemos la llamada indicandole el body que le vamos a pasar por post y las cabeceras, que en este caso son un multipart form
-    API.post('/users/register', body, {
-      headers: { 'Content-Type': 'multipart/form-data' },
+    API.post("/users/register", body, {
+      headers: { "Content-Type": "multipart/form-data" },
     })
       .catch((error) => {
-        console.log('NO PUEDO', error);
+        console.log("NO PUEDO", error);
       })
       .then(() => {
         const loginBody = new FormData();
-        loginBody.append('username', usernameValue.current.value);
-        loginBody.append('password', passwordValue.current.value);
+        loginBody.append("username", usernameValue.current.value);
+        loginBody.append("password", passwordValue.current.value);
         //Hacemos login automático
-        API.post('/users/login', loginBody)
+        API.post("/users/login", loginBody)
           .then((res) => {
             login(
               {
@@ -42,9 +42,9 @@ const Register = () => {
               },
               res.data.token,
             );
-            navigate('/movies');
+            navigate("/movies");
           })
-          .catch((err) => alert('Cannot login', err));
+          .catch((err) => alert("Cannot login", err));
       });
   };
 

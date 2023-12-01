@@ -1,13 +1,60 @@
-header {
-  height: 90px;
-  width: auto;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+body {
+  margin: 0;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-header ul {
+.logo-container {
+  width: 280px;
+  height: 280px;
   display: flex;
-  gap: 20px;
-  list-style: none;
+  justify-content: flex-start; /* Alinear el logo a la izquierda */
+  align-items: center; /* Centrar verticalmente en el header */
+  margin-left: 30px; /* Margen izquierdo fijo de 30px */
+  position: fixed;
+  top: 10px; /* Ajusta la distancia desde la parte superior según tus necesidades */
+}
+
+.logo {
+  width: 280px;
+  height: 280px;
+}
+
+.logo img {
+  height: 280px; /* Ajusta la altura de la imagen al 100% del contenedor */
+  width: 280px; /* Ajusta el ancho de la imagen al 100% del contenedor */
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  padding-left: 17px;
+  font-weight: bold;
+  z-index: 1000;
+  padding-top: 60px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+
+li {
+  margin: 0 10px;
+}
+
+.navLink {
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000000;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: #3aafab;
+  border-bottom: 2px solid #3aafab;
 }
