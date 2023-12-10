@@ -1,0 +1,42 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 65vh; 
+  }
+  
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    padding: 15px;
+    border: 1px dashed var(--primary);
+    box-sizing: border-box; 
+  }
+  
+  .contact h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  
+  .contact input,
+  .contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+  }
+  
+  .contact input[type="submit"] {
+    background-color: var(--primary);
+    color: grey;
+    cursor: pointer;
+  }
+  
+  .contact input[type="submit"]:hover {
+    background-color: var(--primary-hover);
+  }
+  

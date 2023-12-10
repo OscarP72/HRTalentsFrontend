@@ -14,8 +14,7 @@ const Footer = () => {
             <h3 className="text-white mb-2">RhTalents</h3>
             <p className="text-white">Teléfono: 911106106</p>
             <p className="text-white">Email: info@rhtalents.com</p>
-            <p className="text-white">Dirección: Calle de Fray Luis de León, 11</p>
-            <p className="text-white">28012 Madrid</p>
+            <p className="text-white"> Calle de Fray Luis de León, 11 28012 Madrid</p>
           </div>
           <div className="footer-column text-center mb-3 mt-2">
             <div className="btn-group">

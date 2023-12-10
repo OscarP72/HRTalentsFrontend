@@ -1,12 +1,17 @@
 import './Header.css';
 
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import { UserContext } from '../../context/userContext';
 
 const Header = () => {
   const { user, logout } = useContext(UserContext);
+  const [paraEmpresasOpen, setParaEmpresasOpen] = useState(false);
+  const [trabajaOpen, setTrabajaOpen] = useState(false);
+
+  const toggleParaEmpresas = () => setParaEmpresasOpen(!paraEmpresasOpen);
+  const toggleTrabaja = () => setTrabajaOpen(!trabajaOpen);
 
   return (
     <header>
@@ -15,11 +20,53 @@ const Header = () => {
       <nav>
         <ul>
           <li>
-            <NavLink to="/">Home</NavLink>
+            <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')}>
+              Inicio
+            </NavLink>
           </li>
 
           <li>
-            <NavLink to="/sobrenosotros">Sobre Nosotros</NavLink>
+            <NavLink
+              to="/sobrenosotros"
+              className={({ isActive }) => (isActive ? 'active' : '')}
+            >
+              Sobre Nosotros
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="#"
+              onClick={toggleParaEmpresas}
+              className={({ isActive }) => (isActive ? 'active' : '')}
+            >
+              Para Empresas
+            </NavLink>
+            {paraEmpresasOpen && (
+              <ul>
+                <li>
+                  <NavLink to="/empresas">Empresas</NavLink>
+                </li>
+
+                <li>
+                  <NavLink to="/medidasalternativas">Medidas Alternativas</NavLink>
+                </li>
+              </ul>
+            )}
+          </li>
+          <li>
+            <NavLink to="#" onClick={toggleTrabaja}>
+              Trabaja
+            </NavLink>
+            {trabajaOpen && (
+              <ul>
+                <li>
+                  <NavLink to="/ofertasempleo">Ofertas de Empleo</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/enviocurriculum">Envianos tu CV</NavLink>
+                </li>
+              </ul>
+            )}
           </li>
 
           {user !== null ? (
@@ -38,7 +85,10 @@ const Header = () => {
                 <NavLink to="/login">Login</NavLink>
               </li>
               <li>
-                <NavLink to="/register">Register</NavLink>
+                <NavLink to="/register">Registro</NavLink>
+              </li>
+              <li>
+                <NavLink to="/contacto">Contacto</NavLink>
               </li>
             </>
           )}

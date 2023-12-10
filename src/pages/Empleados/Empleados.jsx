@@ -41,7 +41,7 @@ const Empleados = () => {
           aria-labelledby="exampleModalLabel"
           aria-hidden="true"
         >
-          <div className="modal-dialog">
+          <div className="modal-dialog modal-dialog-centered">
             <div className="modal-content">
               <div className="modal-header">
                 <h5 className="modal-title">Detalles del Empleado</h5>
@@ -53,20 +53,20 @@ const Empleados = () => {
                 ></button>
               </div>
               <div className="modal-body">
-                <p>Nª Empleado:{selectedEmpleado?.emplid}</p>
-                <p>Nombre:{selectedEmpleado?.name}</p>
-                <p>Apellidos:{selectedEmpleado?.lastname}</p>
-                <p>Nif:{selectedEmpleado?.nif}</p>
-                <p>Teléfono:{selectedEmpleado?.phone}</p>
-                <p>Fecha de Nacimiento:{selectedEmpleado?.birthdate}</p>
-                <p>Fecha de Alta:{selectedEmpleado?.dischargeDate}</p>
-                <p>Fecha de Baja:{selectedEmpleado?.enddate}</p>
-                <p>Estado Civil:{selectedEmpleado?.maritalstatus}</p>
-                <p>Hijos:{selectedEmpleado?.children}</p>
-                <p>Cif:{selectedEmpleado?.cif}</p>
-                <p>Compañia:{selectedEmpleado?.company}</p>
-                <p>Nº Seg. Social:{selectedEmpleado?.ssnumber}</p>
-                <p>Dirección:{selectedEmpleado?.addresses}</p>
+                <p>Nª Empleado: {selectedEmpleado?.emplid}</p>
+                <p>Nombre: {selectedEmpleado?.name}</p>
+                <p>Apellidos: {selectedEmpleado?.lastname}</p>
+                <p>Nif: {selectedEmpleado?.nif}</p>
+                <p>Teléfono: {selectedEmpleado?.phone}</p>
+                <p>Fecha de Nacimiento: {selectedEmpleado?.birthdate}</p>
+                <p>Fecha de Alta: {selectedEmpleado?.dischargeDate}</p>
+                <p>Fecha de Baja: {selectedEmpleado?.enddate}</p>
+                <p>Estado Civil: {selectedEmpleado?.maritalstatus}</p>
+                <p>Hijos: {selectedEmpleado?.children}</p>
+                <p>Cif: {selectedEmpleado?.cif}</p>
+                <p>Compañia: {selectedEmpleado?.company}</p>
+                <p>Nº Seg. Social: {selectedEmpleado?.ssnumber}</p>
+                <p>Dirección: {selectedEmpleado?.addresses}</p>
                 <p>Departamento:{selectedEmpleado?.department}</p>
                 {selectedEmpleado?.laborInformation
                   .filter((info) => info._id !== undefined)

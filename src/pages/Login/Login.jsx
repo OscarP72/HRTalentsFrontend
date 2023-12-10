@@ -40,11 +40,11 @@ const Login = () => {
 
   return (
     <main className="login">
-      <h2>Login</h2>
+      <h2>LOGIN</h2>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="username">Username</label>
+        <label htmlFor="username">Usuario</label>
         <input id="username" type="text" minLength={3} required ref={usernameRef} />
-        <label htmlFor="password">Password</label>
+        <label htmlFor="password">Contraseña</label>
         <input id="password" type="password" minLength={8} required ref={passwordRef} />
         <button type="submit">Login</button>
       </form>

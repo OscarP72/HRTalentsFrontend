@@ -39,16 +39,17 @@ const Register = () => {
   };
   return (
     <main className="register">
+      <h2>REGISTRO</h2>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="username">Username</label>
+        <label htmlFor="username">Usuario</label>
         <input id="username" type="text" minLength={3} required ref={usernameRef} />
-        <label htmlFor="password">Password</label>
+        <label htmlFor="password">Contraseña</label>
         <input id="password" type="password" minLength={8} required ref={passwordRef} />
         <label htmlFor="avatar" className="upload">
           Avatar⤴
         </label>
         <input type="file" id="avatar" ref={avatarRef} />
-        <button type="submit">Register</button>
+        <button type="submit">Registro</button>
       </form>
     </main>
   );

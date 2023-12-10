@@ -1,6 +1,7 @@
 :root {
-  --primary: #999fa3;
-  --secondary: #000000;
+  --primary: #ffffff;
+  --secondary: #4b6e97;
+  --tertiary: #0000ff;
   font-family:
     system-ui,
     -apple-system,
@@ -14,6 +15,7 @@
     'Helvetica Neue',
     sans-serif;
 }
+
 
 * {
   margin: 0;

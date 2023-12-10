@@ -1,5 +1,5 @@
 .container {
-  margin: 0 auto;
+  margin: 50px auto 30px; /* Ajusta el margen superior e inferior según sea necesario */
   text-align: center;
 }
 
@@ -8,5 +8,8 @@ p {
 }
 
 img {
-  margin-bottom: 20px;
+  width: 800px;
+  height: 500px;
+  border-radius: 10px;
+  margin: 0 auto 20px; /* Ajusta el margen inferior según sea necesario */
 }
