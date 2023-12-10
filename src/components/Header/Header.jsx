@@ -20,25 +20,14 @@ const Header = () => {
       <nav>
         <ul>
           <li>
-            <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')}>
-              Inicio
-            </NavLink>
+            <NavLink to="/">Inicio</NavLink>
           </li>
 
           <li>
-            <NavLink
-              to="/sobrenosotros"
-              className={({ isActive }) => (isActive ? 'active' : '')}
-            >
-              Sobre Nosotros
-            </NavLink>
+            <NavLink to="/sobrenosotros">Sobre Nosotros</NavLink>
           </li>
           <li>
-            <NavLink
-              to="#"
-              onClick={toggleParaEmpresas}
-              className={({ isActive }) => (isActive ? 'active' : '')}
-            >
+            <NavLink to="#" onClick={toggleParaEmpresas}>
               Para Empresas
             </NavLink>
             {paraEmpresasOpen && (
@@ -86,9 +75,6 @@ const Header = () => {
               </li>
               <li>
                 <NavLink to="/register">Registro</NavLink>
-              </li>
-              <li>
-                <NavLink to="/contacto">Contacto</NavLink>
               </li>
             </>
           )}

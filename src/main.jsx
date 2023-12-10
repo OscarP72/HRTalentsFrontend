@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import App from './App.jsx';
+import IsAuth from './components/IsAuth/IsAuth.jsx';
 import { UserContextProvider } from './context/userContext.jsx';
 import Contacto from './pages/Contacto/Contacto.jsx';
 import EmpleadoDetail from './pages/EmpleadoDetail/EmpleadoDetail.jsx';
@@ -29,7 +30,14 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Routes>
           <Route path="/" element={<App />}>
             <Route index element={<Home />} />
-            <Route path="/empleados" element={<Empleados />} />
+            <Route
+              path="/empleados"
+              element={
+                <IsAuth>
+                  <Empleados />
+                </IsAuth>
+              }
+            />
             <Route path="/empleados/:name" element={<EmpleadoDetail />} />
             <Route path="/sobrenosotros" element={<SobreNosotros />} />
             <Route path="/empresas" element={<Empresas />} />
