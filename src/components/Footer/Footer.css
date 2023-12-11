@@ -21,7 +21,7 @@ html {
 }
 
 .footer-column {
-  flex: 1 1 auto; 
+  flex: 1 1 auto;
   max-width: 300px;
   margin-bottom: 5px;
 }
@@ -38,7 +38,7 @@ html {
 .footer-bottom {
   text-align: center;
   margin-top: 5px;
-  flex: 1 1 100%; 
+  flex: 1 1 100%;
 }
 
 .footer-links {
@@ -48,9 +48,8 @@ html {
 }
 
 .footer-links a {
-  margin: 10px 10px; 
+  margin: 10px 10px;
 }
-
 
 @media (max-width: 768px) {
   .footer-links {
@@ -58,6 +57,6 @@ html {
   }
 
   .footer-links a {
-    margin: 5px 0; 
+    margin: 5px 0;
   }
 }

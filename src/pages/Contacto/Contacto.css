@@ -1,42 +1,64 @@
+/* contacto.css */
+
 .page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 65vh; 
-  }
-  
-  .contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 300px;
-    padding: 15px;
-    border: 1px dashed var(--primary);
-    box-sizing: border-box; 
-  }
-  
-  .contact h2 {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-  }
-  
-  .contact input,
-  .contact textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid var(--primary);
-    border-radius: 5px;
-  }
-  
-  .contact input[type="submit"] {
-    background-color: var(--primary);
-    color: grey;
-    cursor: pointer;
-  }
-  
-  .contact input[type="submit"]:hover {
-    background-color: var(--primary-hover);
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 65vh;
+}
+
+.contact-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-info h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  padding: 15px;
+  border: 1px dashed var(--primary);
+  box-sizing: border-box;
+}
+
+.contact h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid var(--primary);
+  border-radius: 5px;
+}
+
+.contact input[type='submit'] {
+  background-color: var(--primary);
+  color: grey;
+  cursor: pointer;
+}
+
+.contact input[type='submit']:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Agrega estilos para la imagen según tus necesidades */
+.contact-info img {
+  width: 100px; /* Ajusta el tamaño de la imagen según tus preferencias */
+  border-radius: 50%; /* Para una imagen circular */
+  margin-top: 10px; /* Ajusta el margen superior según tus preferencias */
+}

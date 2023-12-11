@@ -47,11 +47,10 @@
   padding: 3px;
   text-align: center;
 }
-.register input[type="file"] {
+.register input[type='file'] {
   margin-bottom: 15px; /* Ajusta el valor según la separación deseada */
 }
 
 .register button {
   margin-top: 10px; /* Agregado un margen superior al botón */
 }
-
