@@ -18,12 +18,17 @@ html {
 
 .footer-content {
   height: 110px;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px; /* Limita el ancho del contenido para evitar problemas */
+  margin: 0 auto;
 }
 
 .footer-column {
-  flex: 1 1 auto;
-  max-width: 300px;
-  margin-bottom: 5px;
+  flex: 1;
+  max-width: 250px;
+  margin-bottom: 10px;
+  padding-top: 90px;
 }
 
 .social-media {
@@ -48,7 +53,7 @@ html {
 }
 
 .footer-links a {
-  margin: 10px 10px;
+  margin: 10px 20px;
 }
 
 @media (max-width: 768px) {

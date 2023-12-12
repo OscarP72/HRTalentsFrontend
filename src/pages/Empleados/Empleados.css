@@ -1,0 +1,20 @@
+
+
+.empleados {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+   
+  }
+  .btn-employee {
+    margin-right: 10px;
+  }
+  .btn {
+    width: 100%;
+  }
+  .modal-dialog {
+    display: flex;
+    align-items: center;
+    min-height: calc(100% - 20px); /* Ajusta según sea necesario para reducir el espacio inferior */
+  }

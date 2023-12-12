@@ -6,10 +6,12 @@ import { useParams } from 'react-router-dom';
 import API from '../../API/API';
 const EmpleadoDetail = () => {
   const { name } = useParams();
+  console.log('Nombre del empleado:', name);
   const [empleado, setEmpleado] = useState(null);
 
   useEffect(() => {
     API.get(`/employeess/byname/${name}`).then((res) => {
+      console.log('Data recibida del servidor:', res.data);
       setEmpleado(res.data);
     });
   }, []);
