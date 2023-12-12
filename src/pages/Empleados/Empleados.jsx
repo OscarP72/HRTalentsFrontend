@@ -31,7 +31,6 @@ const Empleados = () => {
               <button
                 type="button"
                 className="btn btn-primary"
-                style={{ marginRight: '10px' }}
                 onClick={() => openModal(empleado)}
               >
                 Ver detalles
