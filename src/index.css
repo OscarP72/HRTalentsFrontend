@@ -1,6 +1,6 @@
 :root {
-  --primary: #999fa3;
-  --secondary: #000000;
+  --primary: white;
+  --secondary: white;
   font-family:
     system-ui,
     -apple-system,
@@ -32,4 +32,5 @@ a {
 
 main {
   min-height: calc(100vh - 90px - 50px);
+  overflow: auto;
 }

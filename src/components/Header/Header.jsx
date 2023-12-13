@@ -10,13 +10,12 @@ const Header = () => {
   const { user, logout } = useContext(UserContext);
 
   return (
-    <header>
-      <div className="logo_container">
-        <div className="logo">
-          <img src={LogoFinal} alt="LogoFinal" />
-        </div>
+    <div className="header_container">
+      <div className="flex_logo">
+        <img src={LogoFinal} alt="LogoFinal" />
       </div>
-      <nav>
+
+      <nav className="flex_nav">
         <ul>
           <li>
             <NavLink to="/" className="navLink">
@@ -72,7 +71,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-    </header>
+    </div>
   );
 };
 

@@ -1,60 +1,83 @@
 import "./Footer.css";
 
 import React from "react";
-import { Link } from "react-router-dom";
+
+import LogoFinal from "../../assets/logo/LogoFinal.png";
 
 const Footer = () => {
-  const socialIcons = [
-    { name: "facebook", url: "https://www.facebook.com" },
-    { name: "twitter", url: "https://www.twitter.com" },
-    { name: "instagram", url: "https://www.instagram.com" },
-    { name: "youtube", url: "https://www.youtube.com" },
-    { name: "linkedin", url: "https://www.linkedin.com" },
-  ];
-
   return (
-    <>
-      <div className="container">
-        <div className="social-icons">
-          {socialIcons.map((icon, index) => (
+    <div className="footer_container">
+      <div className="content_flex">
+        <div className="logo">
+          <figure>
+            <div className="flex_logo">
+              <img src={LogoFinal} alt="LogoFinal" />
+            </div>
+          </figure>
+        </div>
+        <div className="titulo_parrafos">
+          <h2>SOBRE NOSOTROS</h2>
+          <p>
+            En 2023 se creó HRTalents como Gestora de Recursos Humanos. El
+            equipo de trabajo de HRTalents apuesta por el derecho a la igualdad
+            de oportunidades para que las personas que tienen discapacidad
+            puedan acceder a empleos de mayor cualificación, estables y
+            adaptables.
+          </p>
+        </div>
+        <div className="social_icons">
+          <h2>SIGUENOS</h2>
+          <div className="red-social">
             <a
-              key={index}
-              href={icon.url}
+              href="https://www.facebook.com/"
+              className="fa fa-facebook"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src={`./assets/iconos/${icon.name}.png`} alt={icon.name} />
+              &nbsp;
             </a>
-          ))}
+            <a
+              href="https://www.instagram.com/"
+              className="fa fa-instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              &nbsp;
+            </a>
+            <a
+              href="https://twitter.com/"
+              className="fa fa-twitter"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              &nbsp;
+            </a>
+            <a
+              href="https://www.youtube.com/"
+              className="fa fa-youtube"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              &nbsp;
+            </a>
+            <a
+              href="https://www.linkedin.com/"
+              className="fa fa-linkedin"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              &nbsp;
+            </a>
+          </div>
+        </div>
+        <div className="copyrigt">
+          <small>
+            &copy; 2023 <b>HRTalents</b> - Todos los Derechos Reservados.
+          </small>
         </div>
       </div>
-
-      <div className="container_copyright">
-        <div className="copyright">
-          <img src="./assets/iconos/copyright.png" alt="Símbolo de copyright" />
-
-          <p>Copyright © 2023 HRTalents</p>
-        </div>
-      </div>
-      <div className="footer">
-        <div className="links">
-          <Link
-            to="./public/pdf/politica-privacidad"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <p> Política de privacidad</p>
-          </Link>
-
-          <a
-            href="./public/pdf/politica-cookies.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          ></a>
-          <p>Política de cookies</p>
-        </div>
-      </div>
-    </>
+    </div>
   );
 };
+
 export default Footer;
