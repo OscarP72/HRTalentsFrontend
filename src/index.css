@@ -1,4 +1,5 @@
 :root {
+
   --primary: #ffffff;
   --secondary: #4b6e97;
   --tertiary: #0000ff;
@@ -34,4 +35,5 @@ a {
 
 main {
   min-height: calc(100vh - 90px - 50px);
+
 }

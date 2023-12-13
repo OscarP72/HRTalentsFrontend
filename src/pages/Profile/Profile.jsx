@@ -1,3 +1,4 @@
+
 import './Profile.css';
 
 import { useContext } from 'react';
@@ -11,6 +12,7 @@ const Profile = () => {
       <img src={user.avatar} alt={user.username} />
       <h2>{user.username}</h2>
     </main>
+
   );
 };
 

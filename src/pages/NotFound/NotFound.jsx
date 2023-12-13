@@ -1,3 +1,4 @@
+
 import './NotFound.css';
 
 import notFound from '../../assets/notfound.jpg';
@@ -7,6 +8,7 @@ const NotFound = () => {
     <div className="container1">
       <img src={notFound} alt="Página no encontrada" />
     </div>
+
   );
 };
 

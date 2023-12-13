@@ -1,3 +1,4 @@
+
 import './index.css';
 
 import React from 'react';
@@ -23,6 +24,7 @@ import Register from './pages/Register/Register.jsx';
 import SobreNosotros from './pages/SobreNosotros/SobreNosotros.jsx';
 import Trabaja from './pages/Trabaja/Trabaja.jsx';
 
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
@@ -30,6 +32,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Routes>
           <Route path="/" element={<App />}>
             <Route index element={<Home />} />
+
             <Route
               path="/empleados"
               element={
@@ -50,10 +53,13 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/contacto" element={<Contacto />} />
+
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
       </UserContextProvider>
+
     </BrowserRouter>
   </React.StrictMode>,
 );
+
