@@ -75,7 +75,7 @@ const Empleados = () => {
                   {selectedEmpleado?.laborInformation
                     .filter((info) => info._id !== undefined)
                     .map((info) => (
-                      <div key={info._id} className="col-md-3 mb-4">
+                      <div key={info._id}>
                         <p>Salario: {info.salary}</p>
                         <p>Cargo: {info.job}</p>
                         <p>Categoria: {info.position}</p>

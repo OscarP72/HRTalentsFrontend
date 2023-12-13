@@ -1,12 +1,7 @@
 import './Home.css';
 
-import fotohome from '../../assets/fotohome.jpg';
 const Home = () => {
-  return (
-    <main>
-      <img src={fotohome} alt="Foto de reunión" />
-    </main>
-  );
+  return <main></main>;
 };
 
 export default Home;
