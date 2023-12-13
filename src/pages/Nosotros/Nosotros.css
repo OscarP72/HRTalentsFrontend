@@ -1,11 +1,10 @@
 .container_nosotros {
-  height: 100vh; 
-  width: 100vw; 
+  height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
 }
 
 .titulo_somos {
@@ -13,7 +12,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
 }
 .titulo_somos h1 {
   font-family: Cooper;
@@ -21,8 +19,7 @@
   margin-top: 0px;
   margin-bottom: 20px;
   text-align: center;
-  color:#087680;
-  
+  color: #087680;
 }
 
 .text_container {
@@ -44,21 +41,20 @@
 }
 
 .container_valores {
-  text-align: center; 
-  margin-top: 40px; 
+  text-align: center;
+  margin-top: 40px;
 }
 
 .container_valores h3 {
-  font-size: 45px; 
+  font-size: 45px;
   margin-top: -50px;
-  margin-bottom: 20px; 
-  
+  margin-bottom: 20px;
 }
 
 .flex_valores {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 10px; 
+  gap: 10px;
   justify-content: center;
 }
 
@@ -67,8 +63,8 @@
   margin-left: 30px;
   margin-right: 30px;
   font-size: 20px;
-  color:whitesmoke;
-  background:black;
+  color: whitesmoke;
+  background: black;
 }
 
 .flex_valores p {
@@ -76,9 +72,8 @@
   margin-left: 30px;
   margin-right: 30px;
   font-size: 20px;
-  color:black;
+  color: black;
   margin-top: 30px;
- 
 }
 .flex_lema {
   display: flex;
@@ -87,10 +82,9 @@
   align-items: center;
   text-align: center;
 }
-.flex_lema h2{
+.flex_lema h2 {
   height: 40px;
   margin-top: 200px;
   font-size: 20px;
-  color:black
-
+  color: black;
 }

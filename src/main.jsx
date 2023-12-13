@@ -8,7 +8,6 @@ import App from "./App.jsx";
 import { UserContextProvider } from "./context/userContext.jsx";
 import Empleados from "./pages/Empleados/Empleados.jsx";
 import Home from "./pages/Home/Home.jsx";
-import Laborales from "./pages/Laborales/Laborales.jsx";
 import Login from "./pages/Login/Login.jsx";
 import Nosotros from "./pages/Nosotros/Nosotros.jsx";
 import NotFound from "./pages/NotFound/NotFound.jsx";
@@ -25,7 +24,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             <Route index element={<Home />} />
             <Route path="/nosotros" element={<Nosotros />} />
             <Route path="/empleados" element={<Empleados />} />
-            <Route path="/laborales" element={<Laborales />} />
+
             <Route path="/profile" element={<Profile />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
