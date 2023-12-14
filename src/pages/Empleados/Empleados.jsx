@@ -100,6 +100,7 @@ const Empleados = () => {
     </main>
 
   );
+
 };
 
 export default Empleados;

@@ -7,7 +7,6 @@ import { useNavigate } from 'react-router-dom';
 import { UserContext } from '../../context/userContext';
 import API from '../../services/API';
 
-
 const Login = () => {
   //Almacenamos la funcionalidad del useNavigate
   const navigate = useNavigate();
@@ -33,7 +32,6 @@ const Login = () => {
             avatar: res.data.avatar,
             id: res.data.id,
           },
-
           res.data.token,
         );
         navigate('/empleados');
