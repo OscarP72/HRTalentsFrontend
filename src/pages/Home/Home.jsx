@@ -1,21 +1,14 @@
-import "./Home.css";
+import './Home.css';
 
-import React from "react";
+import React from 'react';
 
-import video from "../../assets/videos/caminando.mp4";
+import video from '../../assets/videos/caminando.mp4';
 
 const Home = () => {
   return (
     <div className="container_home">
       <div className="video_container">
-        <video
-          src={video}
-          alt="Video"
-          loop
-          muted
-          autoPlay
-          className="video_total"
-        />
+        <video src={video} alt="Video" loop muted autoPlay className="video_total" />
       </div>
       <div className="texto_video">
         <div className="flex_titulo">
@@ -23,8 +16,8 @@ const Home = () => {
         </div>
         <div className="flex_banner">
           <h2>
-            Fomentamos el empleo de las personas trabajadoras con discapacidad
-            en el mercado global
+            Fomentamos el empleo de las personas trabajadoras con discapacidad en el
+            mercado global
           </h2>
         </div>
         <div className="flex_solicitud">
@@ -35,8 +28,8 @@ const Home = () => {
         </div>
       </div>
       <div className="container_formulario">
-        <form className="formulario">
-          <ul className="grid_container">
+        <form className="grid_cuadricula">
+          <ul>
             <li>
               <label htmlFor="username">Ingrese su nombre</label>
               <input id="username" name="username" type="text" />
@@ -69,21 +62,16 @@ const Home = () => {
             <li>
               <label htmlFor="message">Comentarios:</label>
             </li>
-            <div className="texto_comentarios">
-              <textarea
-                id="message"
-                name="mensaje"
-                rows="6"
-                cols="50"
-              ></textarea>
-            </div>
-            <button className="button_ul">Enviar registro</button>
+            <li className="texto_comentarios">
+              <textarea id="message" name="mensaje" rows="6" cols="50"></textarea>
+            </li>
+            <button className="button">Enviar registro</button>
 
             <li>
               <label htmlFor="tac">
                 <p>
                   <a href="../PoliticaPrivacidad" target="_blank">
-                    {"Lea nuestra Política de Privacidad"}
+                    {'Lea nuestra Política de Privacidad'}
                   </a>
                 </p>
                 <input id="tac" type="checkbox" name="terminos y condiciones" />

@@ -1,4 +1,3 @@
-
 import './Empleados.css';
 
 import { useEffect, useState } from 'react';
@@ -98,9 +97,7 @@ const Empleados = () => {
         </div>
       </div>
     </main>
-
   );
-
 };
 
 export default Empleados;

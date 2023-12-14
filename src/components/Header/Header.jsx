@@ -1,10 +1,10 @@
-import "./Header.css";
+import './Header.css';
 
-import React, { useContext } from "react";
-import { NavLink } from "react-router-dom";
+import React, { useContext } from 'react';
+import { NavLink } from 'react-router-dom';
 
-import LogoFinal from "../../assets/logo/LogoFinal.png";
-import { UserContext } from "../../context/userContext";
+import LogoFinal from '../../assets/logo/LogoFinal.png';
+import { UserContext } from '../../context/userContext';
 
 const Header = () => {
   const { user, logout } = useContext(UserContext);
@@ -32,7 +32,6 @@ const Header = () => {
               Empleados
             </NavLink>
           </li>
-         
 
           {user !== null ? (
             <>
@@ -58,14 +57,12 @@ const Header = () => {
                 </NavLink>
               </li>
               <li>
-            <NavLink to="/contacto" className="navLink">
-              Contacto
-            </NavLink>
-          </li>
+                <NavLink to="/contacto" className="navLink">
+                  Contacto
+                </NavLink>
+              </li>
             </>
           )}
-
-          
         </ul>
       </nav>
     </div>

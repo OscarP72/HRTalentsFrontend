@@ -1,4 +1,3 @@
-
 import './index.css';
 
 import React from 'react';
@@ -23,7 +22,6 @@ import Profile from './pages/Profile/Profile.jsx';
 import Register from './pages/Register/Register.jsx';
 import Nosotros from './pages/Nosotros/Nosotros.jsx';
 import Trabaja from './pages/Trabaja/Trabaja.jsx';
-
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

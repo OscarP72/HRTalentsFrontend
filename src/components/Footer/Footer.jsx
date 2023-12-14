@@ -1,8 +1,8 @@
-import "./Footer.css";
+import './Footer.css';
 
-import React from "react";
+import React from 'react';
 
-import LogoFinal from "../../assets/logo/LogoFinal.png";
+import LogoFinal from '../../assets/logo/LogoFinal.png';
 
 const Footer = () => {
   return (
@@ -18,16 +18,15 @@ const Footer = () => {
         <div className="titulo_parrafos">
           <h2>SOBRE NOSOTROS</h2>
           <p>
-            En 2023 se creó HRTalents como Gestora de Recursos Humanos. El
-            equipo de trabajo de HRTalents apuesta por el derecho a la igualdad
-            de oportunidades para que las personas que tienen discapacidad
-            puedan acceder a empleos de mayor cualificación, estables y
-            adaptables.
+            En 2023 se creó HRTalents como Gestora de Recursos Humanos. El equipo de
+            trabajo de HRTalents apuesta por el derecho a la igualdad de oportunidades
+            para que las personas que tienen discapacidad puedan acceder a empleos de
+            mayor cualificación, estables y adaptables.
           </p>
         </div>
         <div className="social_icons">
           <h2>SIGUENOS</h2>
-          <div className="red-social">
+          <div className="red_social">
             <a
               href="https://www.facebook.com/"
               className="fa fa-facebook"
