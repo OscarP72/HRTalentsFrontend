@@ -14,7 +14,7 @@ const Header = () => {
       <div className="flex_logo">
         <img src={LogoFinal} alt="LogoFinal" />
       </div>
-
+      {user !== null && <h2>Hola {user.username}</h2>}
       <nav className="flex_nav">
         <ul>
           <li>
@@ -28,13 +28,24 @@ const Header = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/empleados" className="navLink">
-              Empleados
+            <NavLink to="/ofertasempleo" className="navlink">
+              Ofertas de Empleo
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/enviocurriculum" className="navlink">
+              Envianos tu CV
             </NavLink>
           </li>
 
           {user !== null ? (
             <>
+              <li>
+                <NavLink to="/empleados" className="navLink">
+                  Empleados
+                </NavLink>
+              </li>
+
               <li>
                 <NavLink to="/profile" className="navLink">
                   Profile

@@ -230,6 +230,7 @@ html {
   position: relative;
   z-index: 6;
 }
+
 .texto_comentarios textarea {
   width: 430px;
   height: 120px;
