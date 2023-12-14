@@ -250,7 +250,7 @@ ul.grid_container {
   z-index: 6;
 }
 
-.grid_container li label[for="message"] {
+.grid_container li label[for='message'] {
   width: 400px;
   height: 40px;
   padding-left: 15px;

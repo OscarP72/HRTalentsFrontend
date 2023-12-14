@@ -1,4 +1,3 @@
-
 import './Register.css';
 
 import { useContext, useRef } from 'react';
@@ -53,7 +52,6 @@ const Register = () => {
         <button type="submit">Registro</button>
       </form>
     </main>
-
   );
 };
 

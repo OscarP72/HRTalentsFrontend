@@ -1,10 +1,10 @@
-import "./Header.css";
+import './Header.css';
 
-import React, { useContext } from "react";
-import { NavLink } from "react-router-dom";
+import React, { useContext } from 'react';
+import { NavLink } from 'react-router-dom';
 
-import LogoFinal from "../../assets/logo/LogoFinal.png";
-import { UserContext } from "../../context/userContext";
+import LogoFinal from '../../assets/logo/LogoFinal.png';
+import { UserContext } from '../../context/userContext';
 
 const Header = () => {
   const { user, logout } = useContext(UserContext);
@@ -14,7 +14,7 @@ const Header = () => {
       <div className="flex_logo">
         <img src={LogoFinal} alt="LogoFinal" />
       </div>
-
+      {user !== null && <h2>Hola {user.username}</h2>}
       <nav className="flex_nav">
         <ul>
           <li>
@@ -28,14 +28,23 @@ const Header = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/empleados" className="navLink">
-              Empleados
+            <NavLink to="/ofertasempleo" className="navlink">
+              Ofertas de Empleo
             </NavLink>
           </li>
-         
-
+          <li>
+            <NavLink to="/enviocurriculum" className="navlink">
+              Envianos tu CV
+            </NavLink>
+          </li>
           {user !== null ? (
             <>
+              <li>
+                <NavLink to="/empleados" className="navLink">
+                  Empleados
+                </NavLink>
+              </li>
+
               <li>
                 <NavLink to="/profile" className="navLink">
                   Profile
@@ -58,14 +67,12 @@ const Header = () => {
                 </NavLink>
               </li>
               <li>
-            <NavLink to="/contacto" className="navLink">
-              Contacto
-            </NavLink>
-          </li>
+                <NavLink to="/contacto" className="navLink">
+                  Contacto
+                </NavLink>
+              </li>
             </>
           )}
-
-          
         </ul>
       </nav>
     </div>
