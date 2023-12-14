@@ -21,7 +21,7 @@ import OfertasDeEmpleo from './pages/OfertasDeEmpleo/OfertasDeEmpleo.jsx';
 import ParaEmpresas from './pages/ParaEmpresas/ParaEmpresas.jsx';
 import Profile from './pages/Profile/Profile.jsx';
 import Register from './pages/Register/Register.jsx';
-import SobreNosotros from './pages/SobreNosotros/SobreNosotros.jsx';
+import Nosotros from './pages/Nosotros/Nosotros.jsx';
 import Trabaja from './pages/Trabaja/Trabaja.jsx';
 
 
@@ -42,7 +42,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
               }
             />
             <Route path="/empleados/:name" element={<EmpleadoDetail />} />
-            <Route path="/sobrenosotros" element={<SobreNosotros />} />
+            <Route path="/sobrenosotros" element={<Nosotros />} />
             <Route path="/empresas" element={<Empresas />} />
             <Route path="/paraempresas" element={<ParaEmpresas />} />
             <Route path="/medidasalternativas" element={<MedidasAlternativas />} />

@@ -32,11 +32,7 @@ const Header = () => {
               Empleados
             </NavLink>
           </li>
-          <li>
-            <NavLink to="/laborales" className="navLink">
-              Laborales
-            </NavLink>
-          </li>
+         
 
           {user !== null ? (
             <>
@@ -61,14 +57,15 @@ const Header = () => {
                   Register
                 </NavLink>
               </li>
+              <li>
+            <NavLink to="/contacto" className="navLink">
+              Contacto
+            </NavLink>
+          </li>
             </>
           )}
 
-          <li>
-            <NavLink to="/notfound" className="navLink">
-              NotFound
-            </NavLink>
-          </li>
+          
         </ul>
       </nav>
     </div>
