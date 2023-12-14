@@ -1,4 +1,3 @@
-
 import './index.css';
 
 import React from 'react';
@@ -16,14 +15,13 @@ import EnvioCurriculum from './pages/EnvioCurriculum/EnvioCurriculum.jsx';
 import Home from './pages/Home/Home.jsx';
 import Login from './pages/Login/Login.jsx';
 import MedidasAlternativas from './pages/MedidasAlternativas/MedidasAlternativas.jsx';
+import Nosotros from './pages/Nosotros/Nosotros.jsx';
 import NotFound from './pages/NotFound/NotFound.jsx';
 import OfertasDeEmpleo from './pages/OfertasDeEmpleo/OfertasDeEmpleo.jsx';
 import ParaEmpresas from './pages/ParaEmpresas/ParaEmpresas.jsx';
 import Profile from './pages/Profile/Profile.jsx';
 import Register from './pages/Register/Register.jsx';
-import Nosotros from './pages/Nosotros/Nosotros.jsx';
 import Trabaja from './pages/Trabaja/Trabaja.jsx';
-
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

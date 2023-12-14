@@ -1,6 +1,6 @@
-import "./PoliticaCookies.css";
+import './PoliticaCookies.css';
 
-import React from "react";
+import React from 'react';
 
 const PoliticaCookies = () => {
   return (

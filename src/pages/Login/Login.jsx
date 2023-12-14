@@ -1,4 +1,3 @@
-
 import './Login.css';
 
 import { useContext, useRef } from 'react';
@@ -11,7 +10,6 @@ const Login = () => {
   //Almacenamos la funcionalidad del useNavigate
   const navigate = useNavigate();
   const { login } = useContext(UserContext);
-
 
   const usernameRef = useRef(null);
   const passwordRef = useRef(null);
@@ -38,12 +36,10 @@ const Login = () => {
       })
       .catch((error) => {
         alert('USUARIO NO VALIDO', error);
-
       });
   };
 
   return (
-
     <main className="login">
       <h2>LOGIN</h2>
       <form onSubmit={handleSubmit}>
