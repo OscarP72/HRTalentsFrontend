@@ -32,7 +32,7 @@ const Header = () => {
               Empleados
             </NavLink>
           </li>
-         
+
 
           {user !== null ? (
             <>
@@ -58,14 +58,14 @@ const Header = () => {
                 </NavLink>
               </li>
               <li>
-            <NavLink to="/contacto" className="navLink">
-              Contacto
-            </NavLink>
-          </li>
+                <NavLink to="/contacto" className="navLink">
+                  Contacto
+                </NavLink>
+              </li>
             </>
           )}
 
-          
+
         </ul>
       </nav>
     </div>
