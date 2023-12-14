@@ -37,6 +37,7 @@ const Header = () => {
               Envianos tu CV
             </NavLink>
           </li>
+
           {user !== null ? (
             <>
               <li>

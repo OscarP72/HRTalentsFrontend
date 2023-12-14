@@ -26,7 +26,7 @@ const Footer = () => {
         </div>
         <div className="social_icons">
           <h2>SIGUENOS</h2>
-          <div className="red-social">
+          <div className="red_social">
             <a
               href="https://www.facebook.com/"
               className="fa fa-facebook"
