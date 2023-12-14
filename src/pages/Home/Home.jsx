@@ -1,7 +1,6 @@
 import './Home.css';
 
-import axios from 'axios';
-import React, { useState } from 'react';
+
 
 import video from '../../assets/videos/caminando.mp4';
 
@@ -77,8 +76,7 @@ const Home = () => {
         </div>
       </div>
       <div className="container_formulario">
-        <form className="formulario" onSubmit={handleSubmit}>
-          <ul className="grid_container">
+
             <li>
               <label htmlFor="username">Ingrese su nombre</label>
               <input
@@ -142,18 +140,7 @@ const Home = () => {
             <li>
               <label htmlFor="message">Comentarios:</label>
             </li>
-            <div className="texto_comentarios">
-              <textarea
-                name="comentarios"
-                rows="6"
-                cols="50"
-                value={formData.comentarios}
-                onChange={handleChange}
-              />
-            </div>
-            <div>
-              <input type="submit" value="Enviar" />
-            </div>
+
             <li>
               <label htmlFor="tac">
                 <p>
