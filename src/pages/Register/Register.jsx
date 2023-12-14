@@ -1,5 +1,7 @@
 import './Register.css';
+
 import { useContext, useRef } from 'react';
+
 import API from '../../API/API';
 import { UserContext } from '../../context/userContext';
 
@@ -12,7 +14,6 @@ const Register = () => {
 
   const handleSubmit = (ev) => {
     ev.preventDefault();
-
     const body = new FormData();
     body.append('username', usernameRef.current.value);
     body.append('password', passwordRef.current.value);
@@ -21,10 +22,21 @@ const Register = () => {
     API.post('/users/register', body, {
       headers: { 'Content-Type': 'multipart/form-data' },
     }).then(() => {
-      // Resto del código...
+      const loginBody = new FormData();
+      loginBody.append('username', usernameRef.current.value);
+      loginBody.append('password', passwordRef.current.value);
+
+      API.post('/users/login', loginBody).then((res) => {
+        login(
+          {
+            username: res.data.username,
+            avatar: res.data.avatar,
+          },
+          res.data.token,
+        );
+      });
     });
   };
-
   return (
     <main className="register">
       <h2>REGISTRO</h2>
